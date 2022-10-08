@@ -1,6 +1,7 @@
 {
   "name": "nodejs-server",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "index.js",
   "engines": {
@@ -11,6 +12,10 @@
     "start": "node index.js",
     "server": "nodemon --experimental-modules --es-module-specifier-resolution=node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tranphuong95/Server-learn-react-saga"
   },
   "keywords": [],
   "author": "",
