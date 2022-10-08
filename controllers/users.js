@@ -33,9 +33,10 @@ export const addUser=async(req, res)=>{
         console.log(error)
     }
 }
-export const upadateUser=async(req, res)=>{
+export const updateUser=async(req, res)=>{
     const data=req.body;
     const {id}=req.params;
+    console.log(data)
     try {
         await Users.findByIdAndUpdate(id, data, {new: true});
          res.status(200).json({data, statusCode: 0, message: "Update người dùng thành công" })
