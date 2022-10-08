@@ -5,7 +5,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import nodeCron from "node-cron";
 
-import routerUsers from "./router/users";
+import routerUsers from "./routes/users";
 
 dotenv.config();
 const app = express();
