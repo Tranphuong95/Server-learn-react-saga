@@ -18,17 +18,16 @@ app.get("/", (req, res) => {
 
 app.use("/", routerUsers);
 const PORT = process.env.PORT || 8080;
-// const CONNECTION_URL = process.env.CONNECTION_URL;
+const CONNECTION_URL = process.env.CONNECTION_URL;
 
-app.listen(PORT, () => console.log(`Connected to Database, Server running on port ${PORT}`))
-// mongoose
-//   .connect(CONNECTION_URL, {
-//     useNewUrlParser: true,
-//     // useUnifiedTopology: true,
-//     // useFindAndModify: false,
-//   })
-//   .then(() =>
-//     app.listen(PORT, () => console.log(`Connected to Database, Server running on port ${PORT}`))
-//   )
-//   .catch((err) => console.error("An error has occured", err.message));
+mongoose
+  .connect(CONNECTION_URL, {
+    useNewUrlParser: true,
+    // useUnifiedTopology: true,
+    // useFindAndModify: false,
+  })
+  .then(() =>
+    app.listen(PORT, () => console.log(`Connected to Database, Server running on port ${PORT}`))
+  )
+  .catch((err) => console.error("An error has occured", err.message));
 // mongoose.set("useUnifiedTopology", false);
