@@ -17,7 +17,7 @@ export const getUser=async(req, res)=>{
     const {id}=req.params;
     try {
         const userData=await Users.findById(id).exec();
-        res.status(200).json({userData, statusCode: 0, message: "Lấy thông tin người dùng thành công" })
+        res.status(200).json({data: userData, statusCode: 0, message: "Lấy thông tin người dùng thành công" })
     } catch (error) {
         console.log(error)
     }
